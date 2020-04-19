@@ -1,9 +1,9 @@
-a = [x for x in range(1,12,1)]
-item = 1
+#a = [x for x in range(1,12,1)]
+#item = 1
 
 def binary_search(list_in, item):
 
-    if item in a:
+    if item in list_in:
 
         list_in = sorted(list_in)
         print(list_in)
@@ -28,4 +28,4 @@ def binary_search(list_in, item):
     else:
         print(f'{item} is not in list.')
 
-binary_search(a,item)
+#binary_search(a,item)
