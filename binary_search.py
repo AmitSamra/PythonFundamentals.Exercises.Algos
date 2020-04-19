@@ -1,24 +1,35 @@
 a = [x for x in range(1,12,1)]
-item = 5
+item = 4
 
 def binary_search(list_in, item):
 
-    list_in = sorted(list_in)
+    if item in a:
 
-    half = len(list_in) // 2
+        list_in = sorted(list_in)
 
-    if list_in[half] == item:
-        return half
+        half = len(list_in) // 2
 
-    elif len(list_in) == 1 or len(list_in) == 2:
-        return list_in.index(item)
+        if list_in[half] == item:
+            #print(list_in)
+            print(f'Your number is {item}')
+            return half
 
-    elif item < list_in[half]:
-        list_a = list_in[0:half]
-        return binary_search(list_a, item)
+        elif len(list_in) == 1 or len(list_in) == 2:
+            print(list_in)
+            print(f'Your number is {item}')
+            return list_in.index(item)
 
-    elif item > list_in[half]:
-        list_a = list_in[half+1:]
-        return binary_search(list_a, item)
+        elif item < list_in[half]:
+            list_a = list_in[0:half]
+            print(list_a)
+            return binary_search(list_a, item)
 
-print(binary_search(a,item))
+        elif item > list_in[half]:
+            list_a = list_in[half+1:]
+            print(list_a)
+            return binary_search(list_a, item)
+
+    else:
+        print(f'{item} is not in list.')
+
+binary_search(a,item)
