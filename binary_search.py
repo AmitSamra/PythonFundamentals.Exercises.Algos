@@ -1,5 +1,5 @@
 a = [x for x in range(1,12,1)]
-item = 11
+item = 1
 
 def binary_search(list_in, item):
 
@@ -10,13 +10,12 @@ def binary_search(list_in, item):
         half = len(list_in) // 2
 
         if list_in[half] == item:
-            #print(list_in)
-            print(f'Your number is {item}')
+            print(f'Your number is {list_in[half]}')
             return half
 
-        elif len(list_in) == 1 or len(list_in) == 2:
-            print(f'Your number is {item}')
-            return list_in.index(item)
+        #elif len(list_in) == 1 or len(list_in) == 2:
+         #   print(f'Your number is {item}')
+          #  return list_in.index(item)
 
         elif item < list_in[half]:
             list_a = list_in[0:half]
