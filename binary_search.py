@@ -13,10 +13,6 @@ def binary_search(list_in, item):
             print(f'Your number is {list_in[half]}')
             return half
 
-        #elif len(list_in) == 1 or len(list_in) == 2:
-         #   print(f'Your number is {item}')
-          #  return list_in.index(item)
-
         elif item < list_in[half]:
             list_a = list_in[0:half]
             return binary_search(list_a, item)
