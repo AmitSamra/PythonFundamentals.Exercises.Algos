@@ -12,9 +12,6 @@ def binary_search(list_in, item):
         print(list_in)
         half = len(list_in) // 2
 
-        #if len(list_in) == 1:
-         #   return list_in.index(item)
-
         if list_in[half] == item:
             print(f'Your number is {list_in[half]}')
             return half
